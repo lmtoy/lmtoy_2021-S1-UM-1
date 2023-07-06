@@ -6,15 +6,7 @@
 
 import os
 import sys
-
-# in prep of the new lmtoy module (from lmtoy import runs)
-try:
-    lmtoy = os.environ['LMTOY']
-    sys.path.append(lmtoy + '/lmtoy')
-    import runs
-except:
-    print("No LMTOY with runs.py")
-    sys.exit(0)
+from lmtoy import runs
 
 project="2021-S1-UM-1"
 
@@ -31,4 +23,5 @@ pars2 = {}
 pars2['BKP7323_CO'] = "admit=0 srdp=1"
 
 
-runs.mk_runs(project, on, pars1, pars2)
+if __name__ == '__main__':    
+    runs.mk_runs(project, on, pars1, pars2, sys.argv)
