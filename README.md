@@ -1,6 +1,6 @@
 # 2021-S1-UM-1
 
-pipeline crashes
+pipeline crashes - seems like observing script was wrong (offset in wrong units, GHz vs. MHz ???)
 
 BKP7323:    https://iopscience.iop.org/article/10.3847/1538-4357/aca097
 
